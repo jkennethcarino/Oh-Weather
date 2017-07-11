@@ -9,6 +9,7 @@ android {
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
+        vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -24,7 +25,15 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
+
+    // Android Support Library
+    compile "com.android.support:appcompat-v7:${android_support_lib_version}"
+    compile "com.android.support:design:${android_support_lib_version}"
+    compile "com.android.support:support-vector-drawable:${android_support_lib_version}"
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+
+    // Butter Knife
+    compile "com.jakewharton:butterknife:${butterknife_lib_version}"
+    annotationProcessor "com.jakewharton:butterknife-compiler:${butterknife_lib_version}"
 }
