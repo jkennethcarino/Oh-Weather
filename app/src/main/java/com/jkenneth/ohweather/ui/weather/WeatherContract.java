@@ -3,6 +3,7 @@ package com.jkenneth.ohweather.ui.weather;
 import android.support.annotation.NonNull;
 
 import com.jkenneth.ohweather.ui.BasePresenter;
+import com.jkenneth.ohweather.ui.weather.domain.model.Weather;
 
 /**
  * This specifies the contract between the view and the presenter.
@@ -15,10 +16,18 @@ public interface WeatherContract {
     interface View {
 
         void setPresenter(@NonNull WeatherContract.Presenter presenter);
+
+        void setLoadingIndicator(boolean active);
+
+        void showWeatherList(Weather weather);
+
+        void showLoadingWeatherListError();
     }
 
     interface Presenter extends BasePresenter {
 
-        void populateWeatherInfo();
+        void populateWeatherList(String[] cityIds);
+
+        void refreshWeatherList(String[] cityIds);
     }
 }

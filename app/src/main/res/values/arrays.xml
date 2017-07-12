@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="city_ids">
+        <!--London -->
+        <item>6058560</item>
+        <item>4298960</item>
+        <item>4517009</item>
+
+        <!-- Prague -->
+        <item>3067696</item>
+        <item>4548393</item>
+
+        <!-- San Francisco -->
+        <item>5391959</item>
+    </string-array>
+</resources>

@@ -1,7 +1,18 @@
 <resources>
     <string name="app_name">Oh Weather</string>
 
+    <!-- Actions -->
+    <string name="action_refresh">Refresh</string>
+
     <!-- Content Descriptions -->
     <string name="desc_logo">App Logo</string>
 
+    <!-- Formats -->
+    <string name="format_location">%1$s, %2$s</string>
+    <string name="format_actual_weather">%1$s · %2$s</string>
+    <string name="format_temperature">%s °C</string>
+
+    <string name="no_weather_desc">No weather description.</string>
+    <string name="no_weather_updates">No weather updates yet.</string>
+    <string name="unable_weather_updates">Unable to retrieve the weather updates. Please try again later.</string>
 </resources>
