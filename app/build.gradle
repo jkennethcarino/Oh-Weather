@@ -27,7 +27,7 @@ android {
         }
     }
     productFlavors {
-        prod {
+        production {
             buildConfigField("String", "API_KEY", '"753086c6bb007406e242b0d5895e3153"')
             buildConfigField("String", "BASE_URL", '"http://api.openweathermap.org/data/2.5/"')
         }
