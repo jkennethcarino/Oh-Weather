@@ -22,8 +22,12 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro',
+                    'proguard/proguard-retrofit2.pro',
+                    'proguard/proguard-okhttp3.pro',
+                    'proguard/proguard-gson.pro',
+                    'proguard/proguard-glide.pro'
         }
     }
     productFlavors {
