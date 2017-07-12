@@ -2,6 +2,7 @@ package com.jkenneth.ohweather.data.source;
 
 import android.support.annotation.NonNull;
 
+import com.jkenneth.ohweather.ui.weather.domain.model.City;
 import com.jkenneth.ohweather.ui.weather.domain.model.Weather;
 
 /**
@@ -17,7 +18,16 @@ public interface WeatherDataSource {
         void onFailure();
     }
 
+    interface GetWeatherDetailCallback {
+
+        void onWeatherDetailLoaded(City city);
+
+        void onFailure();
+    }
+
     void close();
 
     void getWeatherList(@NonNull String cityIds, @NonNull GetWeatherCallback callback);
+
+    void getWeatherDetailByCityId(long cityId, @NonNull GetWeatherDetailCallback callback);
 }

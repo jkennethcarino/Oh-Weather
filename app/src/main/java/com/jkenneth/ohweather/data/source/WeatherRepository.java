@@ -34,4 +34,9 @@ public class WeatherRepository implements WeatherDataSource {
     public void getWeatherList(@NonNull String cityIds, @NonNull GetWeatherCallback callback) {
         mWeatherRemoteDataSource.getWeatherList(cityIds, callback);
     }
+
+    @Override
+    public void getWeatherDetailByCityId(long cityId, @NonNull GetWeatherDetailCallback callback) {
+        mWeatherRemoteDataSource.getWeatherDetailByCityId(cityId, callback);
+    }
 }

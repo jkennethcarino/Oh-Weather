@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="list_item_weather_icon_size">40dp</dimen>
+    <!-- Weather Information List -->
     <dimen name="list_item_height">60dp</dimen>
     <dimen name="list_item_horizontal_padding">16dp</dimen>
+
+    <!-- Weather Detail -->
+    <dimen name="detail_appbar_height">180dp</dimen>
+    <dimen name="detail_expanded_title_marginEnd">64dp</dimen>
+    <dimen name="detail_expanded_title_marginStart">48dp</dimen>
+    <dimen name="detail_weather_icon_size">40dp</dimen>
+    <dimen name="card_margin">16dp</dimen>
+    <dimen name="card_item_vertical_margin">8dp</dimen>
+    <dimen name="card_item_horizontal_margin">8dp</dimen>
 </resources>

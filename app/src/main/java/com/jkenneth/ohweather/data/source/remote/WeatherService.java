@@ -1,6 +1,7 @@
 package com.jkenneth.ohweather.data.source.remote;
 
 import com.jkenneth.ohweather.BuildConfig;
+import com.jkenneth.ohweather.ui.weather.domain.model.City;
 import com.jkenneth.ohweather.ui.weather.domain.model.Weather;
 
 import retrofit2.Call;
@@ -24,5 +25,14 @@ public interface WeatherService {
     Call<Weather> getWeatherByCityIds(@Query("id") String ids,
                                       @Query("units") String units,
                                       @Query("appid") String apiKey);
+
+    /**
+     * Returns the weather detail from the specified {@code id} of the city.
+     *
+     * @param id      City ID
+     * @param apiKey  API key
+     */
+    @GET(BuildConfig.WEATHER_BY_CITY_API)
+    Call<City> getWeatherDetailByCityId(@Query("id") long id, @Query("appid") String apiKey);
 
 }

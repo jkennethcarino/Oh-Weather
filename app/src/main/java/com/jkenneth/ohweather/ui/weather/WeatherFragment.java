@@ -1,5 +1,6 @@
 package com.jkenneth.ohweather.ui.weather;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -17,6 +18,7 @@ import com.jkenneth.ohweather.R;
 import com.jkenneth.ohweather.callback.WeatherInfoCallback;
 import com.jkenneth.ohweather.ui.weather.domain.model.City;
 import com.jkenneth.ohweather.ui.weather.domain.model.Weather;
+import com.jkenneth.ohweather.ui.weatherdetail.WeatherDetailActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -117,6 +119,9 @@ public class WeatherFragment extends Fragment implements WeatherContract.View, W
 
     @Override
     public void onItemClick(@NonNull City city) {
-        // TODO: Show weather details of the selected city
+        if (isAdded()) {
+            Intent intent = WeatherDetailActivity.getStartIntent(getActivity(), city);
+            startActivity(intent);
+        }
     }
 }

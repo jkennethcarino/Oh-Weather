@@ -25,6 +25,8 @@
         <activity
             android:name=".ui.weather.WeatherActivity"
             android:label="@string/app_name" />
+
+        <activity android:name=".ui.weatherdetail.WeatherDetailActivity" />
     </application>
 
 </manifest>
