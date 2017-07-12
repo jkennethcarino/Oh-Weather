@@ -29,6 +29,9 @@ public class AndroidUtils {
 
         if (cursor != null) {
             cursor.moveToFirst();
+            if (cursor.getColumnCount() == 0) {
+                return;
+            }
 
             int status = cursor.getInt(cursor.getColumnIndex(DownloadManager.COLUMN_STATUS));
             if (status == DownloadManager.STATUS_SUCCESSFUL) {
