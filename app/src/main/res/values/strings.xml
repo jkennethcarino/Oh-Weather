@@ -3,6 +3,7 @@
 
     <!-- Actions -->
     <string name="action_refresh">Refresh</string>
+    <string name="action_download">Download</string>
 
     <!-- Content Descriptions -->
     <string name="desc_logo">App Logo</string>
@@ -20,8 +21,15 @@
     <string name="format_humidity">Humidity: %s \%</string>
     <string name="format_geo_coords">Geo Coordinates: [%1$.2f, %2$.2f]</string>
 
+    <!-- Generic error messages -->
     <string name="no_weather_desc">No weather description.</string>
     <string name="no_weather_updates">No weather updates yet.</string>
     <string name="unable_weather_updates">Unable to retrieve the weather updates. Please try again later.</string>
     <string name="unable_weather_detail">Unable to load weather detail. Please try again later.</string>
+
+    <!-- Permissions -->
+    <string name="rationale_write_external">This app needs access to your external storage to save weather icons.</string>
+    <string name="rationale_ask_again">This app may not work correctly without the requested permissions. Open the app settings screen to modify app permissions.</string>
+    <string name="permission_denied_message">Permission denied</string>
+
 </resources>

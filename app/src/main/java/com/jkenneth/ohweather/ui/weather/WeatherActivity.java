@@ -61,6 +61,11 @@ public class WeatherActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main_actions, menu);
+
+        // Hide download action menu
+        MenuItem item = menu.findItem(R.id.action_download);
+        item.setVisible(false);
+
         return true;
     }
 
